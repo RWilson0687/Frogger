@@ -5,98 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frogger</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="game-layout">
+        <!-- Title Section -->
+        <div class="page-title">
+            <h1>Frogger</h1>
+        </div>
 
-    <h3>Seconds Left <span id="time-left">20</span></h3>
-    <h3>Result: <span id="result">0</span></h3>
+        <!-- Content Section -->
+        <div class="content-section">
+            <!-- Description Section -->
+            <div class="game-description">
+                <h3>Game Description</h3>
+                <p>Frogger is a classic arcade game where players guide a frog across a series of obstacles, including busy roads, rivers with floating logs, and other hazards, to reach the safety of a home base. Try and make it to the red square while avioding the black squares first, than the white squares second.</p>
+            </div>
 
-    <button id="start-pause-button">Start/Pause</button>
-    <div class="grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="ending-block"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="log-left l1"></div>
-        <div class="log-left l2"></div>
-        <div class="log-left l3"></div>
-        <div class="log-left l4"></div>
-        <div class="log-left l5"></div>
-        <div class="log-left l1"></div>
-        <div class="log-left l2"></div>
-        <div class="log-left l3"></div>
-        <div class="log-left l4"></div>
-        <div class="log-right l5"></div>
-        <div class="log-right l1"></div>
-        <div class="log-right l2"></div>
-        <div class="log-right l3"></div>
-        <div class="log-right l4"></div>
-        <div class="log-right l5"></div>
-        <div class="log-right l1"></div>
-        <div class="log-right l2"></div>
-        <div class="log-right l3"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="car-left c1"></div>
-        <div class="car-left c2"></div>
-        <div class="car-left c3"></div>
-        <div class="car-left c1"></div>
-        <div class="car-left c2"></div>
-        <div class="car-left c3"></div>
-        <div class="car-left c1"></div>
-        <div class="car-left c2"></div>
-        <div class="car-left c3"></div>
-        <div class="car-right c1"></div>
-        <div class="car-right c2"></div>
-        <div class="car-right c3"></div>
-        <div class="car-right c1"></div>
-        <div class="car-right c2"></div>
-        <div class="car-right c3"></div>
-        <div class="car-right c1"></div>
-        <div class="car-right c2"></div>
-        <div class="car-right c3"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="starting-block  frog"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <!-- Game Section -->
+        <div class="grid-container">
+            <!-- Game and Controls Wrapper -->
+            <div class="game-wrapper">
+                <div class="grid">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="ending-block"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="log-left l1"></div>
+                    <div class="log-left l2"></div>
+                    <div class="log-left l3"></div>
+                    <div class="log-left l4"></div>
+                    <div class="log-left l5"></div>
+                    <div class="log-left l1"></div>
+                    <div class="log-left l2"></div>
+                    <div class="log-left l3"></div>
+                    <div class="log-left l4"></div>
+                    <div class="log-right l5"></div>
+                    <div class="log-right l1"></div>
+                    <div class="log-right l2"></div>
+                    <div class="log-right l3"></div>
+                    <div class="log-right l4"></div>
+                    <div class="log-right l5"></div>
+                    <div class="log-right l1"></div>
+                    <div class="log-right l2"></div>
+                    <div class="log-right l3"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="car-left c1"></div>
+                    <div class="car-left c2"></div>
+                    <div class="car-left c3"></div>
+                    <div class="car-left c1"></div>
+                    <div class="car-left c2"></div>
+                    <div class="car-left c3"></div>
+                    <div class="car-left c1"></div>
+                    <div class="car-left c2"></div>
+                    <div class="car-left c3"></div>
+                    <div class="car-right c1"></div>
+                    <div class="car-right c2"></div>
+                    <div class="car-right c3"></div>
+                    <div class="car-right c1"></div>
+                    <div class="car-right c2"></div>
+                    <div class="car-right c3"></div>
+                    <div class="car-right c1"></div>
+                    <div class="car-right c2"></div>
+                    <div class="car-right c3"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="starting-block  frog"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
 
+                <!-- Controls Section -->
+                <div class="controls">
+                    <h3>Seconds Left: <span id="time-left">20</span></h3>
+                    <h3>Result: <span id="result">0</span></h3>
+                    <button id="start-pause-button">Start/Pause</button>
+                    <button id="restart-button" onclick="refreshPage()">Restart</button>
+                </div>
+                </div>
+        </div>
+                      <!-- Navigation Pane -->
+                      <div id="navigationPane">
+                        <h3><span style="margin-right: 5px;">🎮</span>Other Games<span style="margin-right: 5px;">🎮</span></h3>
+                        <ul class="navigationPane">
+                            <li><a href="https://rwilson0687.github.io/Breakout/">Breakout</a></li>
+                            <li><a href="https://rwilson0687.github.io/ConnectFour/">Connect Four</a></li>
+                            <li><a href="https://rwilson0687.github.io/Frogger/">Frogger</a></li>
+                            <li><a href="https://rwilson0687.github.io/MemoryGame/">Memory Game</a></li>
+                            <li><a href="https://rwilson0687.github.io/RockPaperScissors/">Rock, Paper, Scissors</a></li>
+                            <li><a href="https://rwilson0687.github.io/SpaceInvaders/">Space Invaders</a></li>
+                            <li><a href="https://rwilson0687.github.io/Whack-A-Mole/">Whack-A-Mole</a></li>
+                        </ul>
+                    </div>
     </div>
-    
     <script src="frogger.js"></script>
 </body>
 </html>

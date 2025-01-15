@@ -69,7 +69,6 @@ This function is critical for the game's interactivity, allowing players to navi
       case 'ArrowDown' :
             if (currentIndex + width < width * width) currentIndex += width
             //Moves the frog down by adding the width to currentIndex, ensuring it doesn't exceed the grid boundaries.
-
             break
     }
 
@@ -374,3 +373,8 @@ Summary of Functionality
             If the game is paused, it restarts the game, enabling player input and setting up the necessary intervals for game mechanics.
       This toggle functionality allows for a seamless user experience where players can easily start and stop their gameplay.
 */
+
+//Function to refresh the page
+function refreshPage() {
+      location.reload(); // Reloads the page
+  }

@@ -1,20 +1,91 @@
-/* Ensure the body takes the full viewport height and centers content */
+/* Body styling */
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items at the top */
-    align-items: center;
-    background-color: #282c34;
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    background: url(BG.jpg);
+    background-attachment: fixed;
+    background-size: cover;
     color: white;
+}
+
+/* Body styling */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Press Start 2P', cursive;
+    background: url(BG.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+
+/* Title section */
+.page-title {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Content section */
+.content-section {
+    display: flex; /* Set to flexbox */
+    flex-direction: row; /* Arrange children horizontally */
+    justify-content: flex-start; /* Align the content at the start */
+    align-items: flex-start; /* Align the items to the top */
+    width: 100%; /* Make sure it stretches across */
+    height: 100%; /* Ensure it takes up the full height */
+}
+
+/* Description Section */
+.game-description {
+    width: 25%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Game section (for the grid and description) */
+.grid-container {
+    display: flex;
+    flex-direction: column; /* Keep the grid and controls stacked */
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1; /* Allow the game section to take up remaining space */
+}
+
+/* Navigation Pane */
+#navigationPane {
+    width: 25%; /* Fixed width for the navigation pane */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-left: 20px; /* Space between game and navigation panel */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Grid Styling */
+.grid {
+    width: 360px;
+    height: 360px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 5px;
+    border: 2px solid white;
+    background-color: #444;
 }
 
 /* Game container */
 .game-container {
     position: relative;
-    width: 1200px; /* Adjust for width of game container */
+    width: 100%; /* Adjust width for responsiveness */
+    max-width: 1200px; /* Ensure a max width */
     height: 800px; /* Adjust for height of game container */
     display: flex;
     flex-direction: column;
@@ -22,18 +93,6 @@ body {
     padding: 25px;
     background-color: black;
     border: 5px solid white;
-}
-
-/* Grid styling */
-.grid {
-    width:  360px; /* Keep the width same as your original */
-    height: 360px; /* Keep the height same as your original */
-    display: grid; /* Use CSS grid layout */
-    grid-template-columns: repeat(9, 1fr); /* Adjust the number of columns */
-    grid-template-rows: repeat(9, 1fr);    /* Adjust the number of rows */
-    gap: 5px; /* Space between cells */
-    border: 2px solid white; /* Border around the grid */
-    background-color: #444; /* Background color of the grid */
 }
 
 /* Individual grid cell styling */
@@ -71,4 +130,78 @@ body {
 .frog {
     background-color: green; /* Frog color */
     border-radius: 50%; /* Make the frog circular */
+}
+
+/* Navigation Pane */
+#navigationPane {
+    width: 25%; /* Fixed width for the navigation pane */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    height: auto;
+    margin-left: 20px; /* Space between game and navigation panel */
+}
+
+/* Remove bullet points */
+.navigationPane {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for list items in the navigation */
+.navigationPane li {
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #000000;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Hover effect for navigation items */
+.navigationPane li:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Styling for links in the navigation */
+.navigationPane li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Hover effect for links */
+.navigationPane li a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Controls Styling */
+.controls {
+    text-align: center;
+}
+
+.controls h3 {
+    margin: 10px 0;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #0056b3;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
 }
